@@ -639,16 +639,10 @@ $accordion-button-padding-y:              $accordion-padding-y;
 $accordion-button-padding-x:              $accordion-padding-x;
 $accordion-button-color:                  $accordion-color;
 $accordion-button-bg:                     $accordion-bg;
-$accordion-transition:                    $btn-transition, border-radius .15s ease;
-$accordion-button-active-bg:              tint-color($component-active-bg, 90%);
-$accordion-button-active-color:           shade-color($primary, 10%);
-
-$accordion-button-focus-border-color:     $input-focus-border-color;
-$accordion-button-focus-box-shadow:       $btn-focus-box-shadow;
 
 $accordion-icon-width:                    1.25rem;
 $accordion-icon-color:                    $accordion-color;
-$accordion-icon-active-color:             $accordion-button-active-color;
+$accordion-icon-active-color:             #d6f3fc;
 $accordion-icon-transition:               transform .2s ease-in-out;
 $accordion-icon-transform:                rotate(-180deg);
 
