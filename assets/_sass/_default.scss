@@ -627,9 +627,9 @@ $accordion-padding-y:                     1rem;
 $accordion-padding-x:                     1.25rem;
 $accordion-color:                         #f5f5f5;
 $accordion-bg:                             #ffffff;
-$accordion-border-width:                  $border-width;
-$accordion-border-color:                  rgba($black, .125);
-$accordion-border-radius:                 $border-radius;
+$accordion-border-width:                  100%;
+$accordion-border-color:                  rgba(#000000, .125);
+$accordion-border-radius:                 10px;
 $accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width);
 
 $accordion-body-padding-y:                $accordion-padding-y;
