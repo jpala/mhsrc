@@ -71,15 +71,15 @@ smartergiving_id: #Not yet available
 #mailchimp_spam_guard: b_753395b9f963c9ea2d6980b7c_9e1559c2f0
 events:
     event: 
-      name: Volley Ball Event
-      description: Come play with us
-      date: 10/01/2024
-      registration_url: https://googleforms.com
+        name: Volley Ball Event
+        description: Come play with us
+        date: 10/01/2024
+        registration_url: https://googleforms.com
     event: 
-      name: TT Event
-      date: 11/01/2024
-      registration_url: https://googleforms.com
+        name: TT Event
+        date: 11/01/2024
+        registration_url: https://googleforms.com
     event: 
-      name: TSomeT Event
-      date: 12/01/2024
-      registration_url: https://googleforms.com      
+        name: TSomeT Event
+        date: 12/01/2024
+        registration_url: https://googleforms.com      
