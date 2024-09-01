@@ -77,9 +77,11 @@ events:
         registration_url: https://googleforms.com
     event: 
         name: TT Event
+        description: Come play with us
         date: 11/01/2024
         registration_url: https://googleforms.com
     event: 
         name: TSomeT Event
+        description: Come play with us
         date: 12/01/2024
         registration_url: https://googleforms.com      

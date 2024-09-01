@@ -150,24 +150,24 @@ layout: default
   <div class="container">
     <h2 class="title text-center">Events</h2>
     <div class="accordion accordion-flush" id="accordionFlushExample">
-      {% for event in site.events %}
-      {{event}}
+      {% for event in site.events.event %}
+      {{ event }}
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              {{event.name}}
+              {{ event.name }}
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
               <div>
-                {{event.description}}
+                {{ event.description }}
               </div>
               <div>
-                {{event.date}}
+                {{ event.date }}
               </div>
               <div>
-                {{event.registration_url}}
+                {{ event.registration_url }}
               </div>
             </div>
             
