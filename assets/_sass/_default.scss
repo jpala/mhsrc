@@ -119,11 +119,16 @@ pre code {
 }
 .header.navbar-fixed-top .main-nav .nav .nav-item a {
   color: $text-secondary;
+  font-weight: bold; 
+}
+.header.navbar-fixed-top .main-nav .nav .nav-item a:hover {
+  color: $text-secondary;
+  font-weight: bold; 
+  color: #fb866a;
 }
 .header .logo {
   margin: 0;
   font-size: 26px;
-  padding-top: 10px;
 }
 .header .logo a {
   color: #fff;
@@ -153,7 +158,7 @@ pre code {
   padding: 0;
 }
 .header .main-nav .nav .nav-item {
-  font-weight: normal;
+  font-weight: bold;
   margin-right: 30px;
   font-family: 'Montserrat', sans-serif;
 }
@@ -162,7 +167,7 @@ pre code {
   background: none;
 }
 .header .main-nav .nav .nav-item a {
-  color: darken($color, 20%);
+  color: darken($color, 30%);
   -webkit-transition: none;
   -moz-transition: none;
   -ms-transition: none;
@@ -171,7 +176,7 @@ pre code {
   padding: 15px 10px;
 }
 .header .main-nav .nav .nav-item a:hover {
-  color: darken($color, 30%);
+  color: darken($color, 40%);
   background: none;
 }
 .header .main-nav .nav .nav-item a:focus {
@@ -242,26 +247,26 @@ pre code {
 }
 /* ======= About Section ======= */
 .about {
-  padding: 80px 0;
+  padding: 20px 0;
   background: #f5f5f5;
 }
 .about .title {
   color: darken($color, 30%);
   margin-top: 0;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 .about .intro {
   max-width: 800px;
   margin: 0 auto;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 .about .item {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .about .item .icon-holder {
   position: absolute;
-  left: 30px;
+  left: 20px;
   top: 0;
 }
 .about .item .icon-holder .fa {
@@ -269,7 +274,7 @@ pre code {
   color: darken($color, 30%);
 }
 .about .item .content {
-  padding-left: 60px;
+  padding-left: 20px;
 }
 .about .item .content .sub-title {
   margin-top: 0;
@@ -620,31 +625,62 @@ pre code {
     font-size: 18px;
   }
 }
+/* ======= About Section ======= */
+.leadership {
+  padding: 80px 0;
+  background: #f5f5f5;
+}
+.leadership .title {
+  color: darken($color, 30%);
+  margin-top: 0;
+  margin-bottom: 10px 0px;
+}
+.leadership .intro {
+  max-height: 150px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+}
+.leadership .item {
+  position: relative;
+  margin-bottom: 10px;
+}
+.leadership .item .icon-holder {
+  position: absolute;
+  left: 30px;
+  top: 0;
+}
+.leadership .item .icon-holder .fa {
+  font-size: 24px;
+  color: darken($color, 30%);
+}
+.leadership .item .content {
+  padding-left: 60px;
+}
+.leadership .item .content .sub-title {
+  margin-top: 0;
+  color: darken($color, 30%);
+  font-size: 18px;
+}
+.accordion-section {
+  margin: 10px 0;
+}
+
+.accordion-header {
+  background-color: #6690b9;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.accordion-content {
+  display: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-top: none;
+}
 /* Small devices (tablets, 768px and up) */
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
-$accordion-padding-y:                     1rem;
-$accordion-padding-x:                     1.25rem;
-$accordion-color:                         #f5f5f5;
-$accordion-bg:                             #ffffff;
-$accordion-border-width:                  100%;
-$accordion-border-color:                  rgba(#000000, .125);
-$accordion-border-radius:                 10px;
-$accordion-inner-border-radius:           subtract($accordion-border-radius, $accordion-border-width);
-
-$accordion-body-padding-y:                $accordion-padding-y;
-$accordion-body-padding-x:                $accordion-padding-x;
-
-$accordion-button-padding-y:              $accordion-padding-y;
-$accordion-button-padding-x:              $accordion-padding-x;
-$accordion-button-color:                  $accordion-color;
-$accordion-button-bg:                     $accordion-bg;
-
-$accordion-icon-width:                    1.25rem;
-$accordion-icon-color:                    $accordion-color;
-$accordion-icon-active-color:             #d6f3fc;
-$accordion-icon-transition:               transform .2s ease-in-out;
-$accordion-icon-transform:                rotate(-180deg);
-
-$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
-$accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");

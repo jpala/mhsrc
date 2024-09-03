@@ -4,31 +4,37 @@ layout: default
 <!-- ******HEADER****** -->
 <header id="header" class="header">
   <div class="container">
-    <h1 class="logo pull-left">
-      <a href="/">
-        <span class="logo-title">{{ site.org_name }}</span>
-      </a>
-    </h1><!--//logo-->
-    <nav id="main-nav" class="main-nav navbar-right" role="navigation">
-      <div class="navbar-header">
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button><!--//nav-toggle-->
-      </div><!--//navbar-header-->
-      <div class="navbar-collapse collapse" id="navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
-          <li class="nav-item"><a class="scrollto" href="#about">About</a></li>
-          <li class="nav-item"><a class="scrollto" href="#join">Join Us</a></li>
-          <li class="nav-item"><a class="scrollto" href="#events">Events</a></li>
-          <li class="nav-item"><a class="scrollto" href="#contact">Contact</a></li>
-          <li class="nav-item last"><a class="scrollto highlight" href="#donate">Donate</a></li>
-        </ul><!--//nav-->
-      </div><!--//navabr-collapse-->
-    </nav><!--//main-nav-->
+    <div class="row">
+      <div class="logo pull-left ele-hide" id="site-name">
+        <a href="/">
+          <fiv class="logo-title"><img src="assets/images/{{ site.custom.header }}" alt="{{ site.custom.short_nm }}"> </a>
+      </div>
+      <div>
+        <nav id="main-nav" class="main-nav navbar-right" role="navigation">
+          <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button><!--//nav-toggle-->
+          </div><!--//navbar-header-->
+          <div class="navbar-collapse collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
+              <li class="nav-item"><a class="scrollto" href="#about">About</a></li>
+              <li class="nav-item"><a class="scrollto" href="#join">Join Us</a></li>
+              <li class="nav-item"><a class="scrollto" href="#events">Events</a></li>
+              <li class="nav-item"><a class="scrollto" href="#leadership">Leadership</a></li>
+              <li class="nav-item"><a class="scrollto" href="#contact">Contact</a></li>
+              <li class="nav-item"><a class="scrollto" href="#donate">Donate</a></li>
+            </ul><!--//nav-->
+          </div><!--//navabr-collapse-->
+        </nav><!--//main-nav-->
+      </div>
+    </div><!--//logo-->
+
+  </div>
   </div>
 </header><!--//header-->
 
@@ -39,23 +45,23 @@ layout: default
     <p class="intro">{{ site.org_summary }}</p>
     <div class="btns">
       <!--a class="btn btn-cta-secondary" href="#" target="_blank">Demo</a-->
-      <a class="btn btn-outline btn-outline-medium scrollto" href="#about" target="_blank">Learn More <i class="fa fa-angle-double-down"></i></a>
+      <a class="btn btn-outline btn-outline-medium scrollto" href="#about" target="_blank">Learn More <i
+          class="fa fa-angle-double-down"></i></a>
     </div>
-    <ul class="meta list-inline">
-      <li></li>
-    </ul><!--//meta-->
   </div><!--//container-->
   <div class="social-media">
     <div class="info text-center">
       <ul class="social-icons list-inline">
-        {% if site.twitter_username %}
-        <li><a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        {% if site.org_twitter_username %}
+        <li><a href="https://twitter.com/{{ site.org_twitter_username }}" target="_blank"><i
+              class="fa fa-twitter"></i></a></li>
         {% endif %}
-        {% if site.facebook_username %}
-        <li><a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        {% if site.org_facebook_username %}
+        <li><a href="https://www.facebook.com/{{ site.org_facebook_username }}" target="_blank"><i
+              class="fa fa-facebook"></i></a></li>
         {% endif %}
-        {% if site.instagram_username %}
-        <li><a href="http://instagram.com/{{ site.instagram_username }}"><i class="fa fa-instagram"></i></a></li>
+        {% if site.org_instagram_username %}
+        <li><a href="http://instagram.com/{{ site.org_instagram_username }}"><i class="fa fa-instagram"></i></a></li>
         {% endif %}
         {% if site.org_general_email_inbox %}
         <li class="last"><a href="mailto: {{ site.org_general_email_inbox }}"><i class="fa fa-envelope"></i></a></li>
@@ -65,14 +71,38 @@ layout: default
   </div>
 </section><!--//promo-->
 
+<section id="eventphotos" class="event-photos section"> <!--event photos-->
+  <div class="carousel-container">
+    <div class="carousel">
+      {% for photo in site.event_photos %}
+      <div class="carousel-slide">
+        <img src="assets/images/{{ photo }}" alt="Image 1">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section><!--//event photos--->
 <!-- ******ABOUT****** -->
 <section id="about" class="about section">
   <div class="container">
     <h2 class="title text-center">About Us</h2>
-    <p class="intro text-center">{{ site.org_full_description }}</p>
+    <div class="standard-padding text-justified">{{ site.org_full_description }}</div>
+    <div class="standard-padding text-justified">{{ site.custom.mission_statement }}</div>
+    <div class="standard-padding text-justified">{{ site.custom.activities }}</div>
   </div><!--//container-->
 </section><!--//about-->
-
+<!-- ******ABOUT****** -->
+<section id="photos" class="more-photos section"> <!--more photos-->
+  <div class="carousel-container">
+    <div class="carousel">
+      {% for photo in site.more_photos %}
+      <div class="carousel-slide">
+        <img src="assets/images/{{ photo }}" alt="Image 1">
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section><!--//more photos-->
 <!-- ******JOIN****** -->
 <section id="join" class="join section">
   <div class="container text-center">
@@ -81,13 +111,16 @@ layout: default
       <div class="col-sm-5 col-sm-offset-1 text-right text-right-sm">
         <h1 class="join-us-intro">We Need Your Voice.<br> Join Us!</h1>
       </div>
-      <div class="col-sm-5 text-left text-left-sm">
-        <p>Sign up to receive updates, progress reports and ways to get involved. We're excited to have you join our amazing community!</p>
+      <div class="col-sm-5 text-center text-center-sm">
+        <p>Sign up to receive updates, progress reports and ways to get involved. We're excited to have you join our
+          amazing community!</p>
         {% if site.tinyletter_username %}
         <p><em>No spam. Just the occasional update.</em></p>
         <div class="row">
           <div class="col-sm-12">
-            <form class="form-inline" role="form" action="https://tinyletter.com/{{ site.tinyletter_username }}" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/{{ site.tinyletter_username }}', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+            <form class="form-inline" role="form" action="https://tinyletter.com/{{ site.tinyletter_username }}"
+              method="post" target="popupwindow"
+              onsubmit="window.open('https://tinyletter.com/{{ site.tinyletter_username }}', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
               <div class="input-group input-group-lg col-sm-12">
                 <label class="sr-only" for="tlemail">Email address</label>
                 <input type="email" class="form-control" name="email" id="tlemail" placeholder="email address" />
@@ -101,21 +134,25 @@ layout: default
         {% elsif site.mailchimp_embed_code %}
         <p><em>No spam. Just the occasional update.</em></p>
         <div id="mc_embed_signup">
-          <form action="{{ site.mailchimp_embed_code }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate bs-component" target="_blank" novalidate>
+          <form action="{{ site.mailchimp_embed_code }}" method="post" id="mc-embedded-subscribe-form"
+            name="mc-embedded-subscribe-form" class="validate bs-component" target="_blank" novalidate>
             <div id="mc_embed_signup_scroll">
               <div class="form-group">
                 <label for="mce-EMAIL" class="sr-only">Email Address</label>
-                <input placeholder="email address" type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL">
+                <input placeholder="email address" type="email" value="" name="EMAIL"
+                  class="required email form-control" id="mce-EMAIL">
               </div>
               <div class="form-group">
                 <div class="row">
                   <div class="col-xs-6">
                     <label for="mce-FNAME" class="sr-only">Given / First Name </label>
-                    <input placeholder="given / first name" type="text" value="" name="FNAME" class="form-control" id="mce-FNAME">
+                    <input placeholder="given / first name" type="text" value="" name="FNAME" class="form-control"
+                      id="mce-FNAME">
                   </div>
                   <div class="col-xs-6">
                     <label for="mce-LNAME" class="sr-only">Family / Last Name </label>
-                    <input placeholder="family / last name" type="text" value="" name="LNAME" class="form-control" id="mce-LNAME">
+                    <input placeholder="family / last name" type="text" value="" name="LNAME" class="form-control"
+                      id="mce-LNAME">
                   </div>
                 </div>
               </div>
@@ -124,15 +161,19 @@ layout: default
                 <div class="response" id="mce-success-response" style="display:none"></div>
               </div>
               <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px;"><input type="text" name="{{ site.mailchimp_spam_guard }}" tabindex="-1" value=""></div>
+              <div style="position: absolute; left: -5000px;"><input type="text" name="{{ site.mailchimp_spam_guard }}"
+                  tabindex="-1" value=""></div>
               <div class="clear">
 
-                <input type="submit" value="Join Us!" name="subscribe" id="mc-embedded-subscribe" class="button btn-success btn-block btn" />
+                <input type="submit" value="Join Us!" name="subscribe" id="mc-embedded-subscribe"
+                  class="button btn-success btn-block btn" />
               </div>
             </div>
           </form>
         </div>
-        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+        <script
+          type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
         <!--End mc_embed_signup-->
         {% else %}
         <p><em>Sorry, email signup is not available at this time <i class="fa fa-frown-o"></i></em></p>
@@ -149,41 +190,56 @@ layout: default
 <section id="events" class="events section">
   <div class="container">
     <h2 class="title text-center">Events</h2>
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-      {% for event in site.events.event %}
-      {{ event }}
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              {{ event.name }}
-            </button>
-          </h2>
-          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-              <div>
-                {{ event.description }}
-              </div>
-              <div>
-                {{ event.date }}
-              </div>
-              <div>
-                {{ event.registration_url }}
-              </div>
-            </div>
-            
+    {% for event in site.events %}
+    <div class="accordion-section">
+      <div class="accordion-header">
+        <h3 class="highlight">{{ event.name }}</h3>
+      </div>
+      <div class="accordion-content">
+        <div>
+          <p> {{ event.description }}</p>
+        </div>
+        <div>
+          <b>Event Date: </b>{{ event.date }}
+        </div>
+        <div>
+          Registration: {{ event.registration_url }}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div><!--//container-->
+  </div><!--//container-->
+</section><!--//Events-->
+<!-- ******ABOUT****** -->
+{% assign postsPerPage = 3 %}
+{% assign numPages = site.leadership | size | divided_by: postsPerPage %}
+{% if site.leadership.size | modulo: postsPerPage > 0 %}
+{% assign numPages = numPages | plus: 1 %}
+{% endif %}
+{% assign endIndex = numPages | minus: 1 %}
+<section id="leadership" class="leadership section">
+  <div class="container">
+    {% for pageNum in (0..endIndex) %}
+    {% assign offset = pageNum | times: postsPerPage %}
+    <div class="row">
+      {% for leader in site.leadership limit: postsPerPage offset: offset %}
+      <div class="column">
+        <div class="card">
+          {% if leader.photo %}
+          <img src="assets/images/{{leader.photo}}" alt="Jane" style="width:100%">
+          {% endif %}
+          <div>
+            <h3>{{ leader.name }}</h3>
+            <h4>{{ leader.role}}</h4>
+            <div class="intro">{{ leader.intro }}</div>
           </div>
         </div>
-      {% endfor %}
-      
-      <div class="btns">
-        <!--a class="btn btn-cta-secondary" href="#" target="_blank">Demo</a-->
-        <a class="btn btn-outline btn-outline-medium scrollto" href="#about" target="_blank">Learn More <i class="fa fa-angle-double-down"></i></a>
       </div>
-      <ul class="meta list-inline">
-        <li></li>
-      </ul><!--//meta-->
-    </div><!--//container-->  
-  </div><!--//container-->
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
 </section><!--//about-->
 <!-- ******DONATE****** -->
 <section id="donate" class="donate section text-center">
@@ -191,16 +247,21 @@ layout: default
     <div class="donate-inner">
       <h2 class="title text-center">Donate</h2>
       <div class="info">
-        <p><strong>Become a donor today.</strong><br>As a small grassroots organization, know that every dollar will have an immense impact on our ability to continue working towards our mission.</p>
+        <p><strong>Become a donor today.</strong><br>As a small grassroots organization, know that every dollar will
+          have an immense impact on our ability to continue working towards our mission.</p>
         {% if site.donorbox_campaign_name %}
-          <div class="donorbox text-center">
-            <iframe src="https://donorbox.org/embed/{{ site.donorbox_campaign_name }}" height="600px" width="100%" style="max-width:500px; min-width:310px" seamless="seamless" name="donorbox" frameborder="0" scrolling="no"></iframe>
-          </div>
-          {% if site.is_501c3 == true %}
-            <p>Contributions are tax deductible to the extent permitted by law.<br>{{ site.org_name }} is a 501(c)(3) organization.</p>
-          {% elsif site.fiscal_sponsor_name %}
-            <p>{{ site.org_name }} is fiscally sponsored by {{ site.fiscal_sponsor_name }}, a 501 (c)(3) tax exempt non-profit organization.</p>
-          {% endif %}
+        <div class="donorbox text-center">
+          <iframe src="https://donorbox.org/embed/{{ site.donorbox_campaign_name }}" height="600px" width="100%"
+            style="max-width:500px; min-width:310px" seamless="seamless" name="donorbox" frameborder="0"
+            scrolling="no"></iframe>
+        </div>
+        {% if site.is_501c3 == true %}
+        <p>Contributions are tax deductible to the extent permitted by law.<br>{{ site.org_name }} is a 501(c)(3)
+          organization.</p>
+        {% elsif site.fiscal_sponsor_name %}
+        <p>{{ site.org_name }} is fiscally sponsored by {{ site.fiscal_sponsor_name }}, a 501 (c)(3) tax exempt
+          non-profit organization.</p>
+        {% endif %}
         {% else %}
         <div class="donorbox text-center">
         </div>
@@ -217,13 +278,13 @@ layout: default
         <div class="btn-container  text-center">
           <!--//You need to generate your own PayPal button if you choose to use Paypal - https://www.paypal.com/us/cgi-bin/?cmd=_donate-intro-outside -->
           <!--PayPal generated code starts-->
-              <!--form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <!--form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
               <input type="hidden" name="cmd" value="_s-xclick">
               <input type="hidden" name="hosted_button_id" value="{{ site.paypal_button_id }}">
               <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
               <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
             </form-->
-            <!--//PayPal generated code ends-->
+          <!--//PayPal generated code ends-->
 
         </div><!--//btn-container-->
       </div><!--//cta-container-->
@@ -238,8 +299,10 @@ layout: default
       <h2 class="title  text-center">Contact</h2>
       <address class="text-center">
         <strong>{{ site.org_name }}</strong><br>
-        {% if site.org_street_address %}{{ site.org_street_address }},&nbsp;{% endif %}{% if site.org_address_suite %}{{ site.org_address_suite }}<br>{% endif %}
-        {% if site.org_city %}{{ site.org_city }},&nbsp;{% endif %}{% if site.org_state %}{{ site.org_state }}&nbsp;{% endif %}{% if site.org_zip %}{{ site.org_zip }}{% endif %}<br>
+        {% if site.org_street_address %}{{ site.org_street_address }},&nbsp;{% endif %}{% if site.org_address_suite %}{{
+        site.org_address_suite }}<br>{% endif %}
+        {% if site.org_city %}{{ site.org_city }},&nbsp;{% endif %}{% if site.org_state %}{{ site.org_state }}&nbsp;{%
+        endif %}{% if site.org_zip %}{{ site.org_zip }}{% endif %}<br>
         {% if site.org_phone %}
         <abbr title="Phone">P:</abbr> {{ site.org_phone }}
         {% endif %}
@@ -248,19 +311,21 @@ layout: default
       <div class="info text-center">
         <h4 class="sub-title">Get Connected</h4>
         <ul class="social-icons list-inline">
-        {% if site.twitter_username %}
-        <li><a href="https://twitter.com/{{ site.org_twitter_username }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        {% endif %}
-        {% if site.facebook_username %}
-        <li><a href="https://www.facebook.com/{{ site.org_facebook_username }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
-        {% endif %}
-        {% if site.instagram_username %}
-        <li><a href="http://instagram.com/{{ site.org_instagram_username }}"><i class="fa fa-instagram"></i></a></li>
-        {% endif %}
-        {% if site.org_general_email_inbox %}
-        <li class="last"><a href="mailto: {{ site.org_general_email_inbox }}"><i class="fa fa-envelope"></i></a></li>
-        {% endif %}
-      </ul>
+          {% if site.org_twitter_username %}
+          <li><a href="https://twitter.com/{{ site.org_twitter_username }}" target="_blank"><i
+                class="fa fa-twitter"></i></a></li>
+          {% endif %}
+          {% if site.org_facebook_username %}
+          <li><a href="https://www.facebook.com/{{ site.org_facebook_username }}" target="_blank"><i
+                class="fa fa-facebook"></i></a></li>
+          {% endif %}
+          {% if site.org_instagram_username %}
+          <li><a href="http://instagram.com/{{ site.org_instagram_username }}"><i class="fa fa-instagram"></i></a></li>
+          {% endif %}
+          {% if site.org_general_email_inbox %}
+          <li class="last"><a href="mailto: {{ site.org_general_email_inbox }}"><i class="fa fa-envelope"></i></a></li>
+          {% endif %}
+        </ul>
       </div><!--//info-->
     </div><!--//contact-inner-->
   </div><!--//container-->
