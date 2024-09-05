@@ -40,6 +40,7 @@ jQuery(document).ready(function ($) {
         // Close the other sections
         $('.accordion-content').not($(this).next()).slideUp();
     });
+    $('.accordion-content').first().css('display', 'block');
     const $carousel = $("#eventphotos .carousel");
     const $slides = $("#eventphotos .carousel-slide");
     const $morePhotos = $("#photos .carousel");
@@ -58,7 +59,6 @@ jQuery(document).ready(function ($) {
         showSlide($morePhotos, pIndex);
         pIndex++;
         epIndex++;
-        console.log(multiplier);
         if(epIndex*multiplier > $slides.length){
             epIndex = 0;
         }

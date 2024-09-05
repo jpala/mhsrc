@@ -68,14 +68,6 @@ events:
       - Krishnan (404-200-6892)
     registration_url: https://googleforms.com
     poster: header.png
-  - name: TKT Event
-    description: Come play with us
-    date: 11/01/2024
-    registration_url: https://googleforms.com
-  - name: TSomeTSP Event
-    description: Come play with us
-    date: 12/01/2024
-    registration_url: https://googleforms.com
 
 leadership:
   - role: Founder & Chairman
