@@ -41,6 +41,10 @@ jQuery(document).ready(function ($) {
         $('.accordion-content').not($(this).next()).slideUp();
     });
     $('.accordion-content').first().css('display', 'block');
+    
+    //var cardHeight = $('.card').first().height();
+    //$('.card').css({ height: cardHeight });
+    
     const $carousel = $("#eventphotos .carousel");
     const $slides = $("#eventphotos .carousel-slide");
     const $morePhotos = $("#photos .carousel");
