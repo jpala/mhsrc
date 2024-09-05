@@ -54,15 +54,20 @@ custom:
   mission_statement: >
     To unite and empower the residents of Mountain House by fostering a vibrant, inclusive community through sports, cultural celebrations, and service initiatives. We are committed to creating opportunities for connection, personal growth, and community pride, ensuring that every individual feels valued and inspired to contribute to the collective well-being of our town.
   activities: >
-    We organize a variety of sports tournaments and leagues that cater to all ages and skill levels. Whether it’s volleyball, or throw ball, our events are designed to foster teamwork and friendly competition.
+    We organize a variety of sports tournaments and leagues that cater to all ages and skill levels. Whether it's volleyball, or throw ball, our events are designed to foster teamwork and friendly competition.
     Community Events: From cultural festivals and holiday celebrations to family-friendly activities, we host events that celebrate the spirit of Mountain House. Our goal is to create memorable experiences and strengthen community bonds.
     Recreational Activities: Our recreational programs include fitness classes, art workshops, and more. We offer opportunities for personal growth and leisure, helping everyone in our community stay active and engaged.
 
 events:
-  - name: Volley Ball Event
+  - name: Volleyball & Throwball Tournament
     description: Come play with us
-    date: 10/01/2024
+    date: 10/20/2024 8 AM
+    registration_deadline: 10/06/2024
+    Contacts: 
+      - Rupesh (309-749-8074)
+      - Krishnan (404-200-6892)
     registration_url: https://googleforms.com
+    poster: header.png
   - name: TKT Event
     description: Come play with us
     date: 11/01/2024
@@ -85,7 +90,7 @@ leadership:
   - role: Vice President
     name: Shravan Yempati
     intro: >
-      Shravan Yempati supports the President in overseeing the club’s activities and initiatives. He plays a key role in community outreach and ensuring the smooth execution of MHSRC's events.
+      Shravan Yempati supports the President in overseeing the club's activities and initiatives. He plays a key role in community outreach and ensuring the smooth execution of MHSRC's events.
   - role: Secretary
     name: Yogesh Reddy
     intro: >
@@ -96,21 +101,21 @@ leadership:
     intro: >
       Krishnan manages the financial health of MHSRC, overseeing all transactions, budgeting, and reporting. He ensures transparency in financial matters and supports the funding of events and programs.
   - role: Joint Secretary
-    name: Brijesh Roy
+    name: Brij Kishore Rai
     photo: brij.jpg
     intro: >
-      Brijesh Roy assists in the administrative functions of the club, working closely with the Secretary to manage correspondence, documentation, and communication.
+      Brij Kishore Rai assists in the administrative functions of the club, working closely with the Secretary to manage correspondence, documentation, and communication.
   - role: Communications Chair
     name: Kaleem Mohammed
     photo: kaleem.jpeg
     intro: >
-      Kaleem is responsible for promoting MHSRC’s mission, events, and programs to the wider community. He manages the club’s social media platforms, website content, and other communication channels.
+      Kaleem is responsible for promoting MHSRC's mission, events, and programs to the wider community. He manages the club's social media platforms, website content, and other communication channels.
   - role: Community Service Chair
     name: Sreekanth Godey
     intro: >
       Sreekanth Godey leads MHSRC's community service initiatives, organizing events and programs that benefit the Mountain House community and encourage active participation.
   - role: Culturalal Activities Chair
-    name: Pradeep Pisharam
+    name: Pradeep Pisharram
     photo: pradeep.jpg
     intro: >
       Pradeep is in charge of organizing cultural events that celebrate the diversity of the Mountain House community. He ensures that these events reflect the values and traditions of the residents.
@@ -121,7 +126,7 @@ leadership:
   - role: Joint Treasurer
     name: Murali Bonthu
     intro: >
-      Murali Bonthu works alongside the Treasurer to manage MHSRC’s financial matters, ensuring that all financial records are accurate and that funds are allocated appropriately.
+      Murali Bonthu works alongside the Treasurer to manage MHSRC's financial matters, ensuring that all financial records are accurate and that funds are allocated appropriately.
   - role: Executive Member
     name: Dev Sutar
     intro: >
@@ -133,7 +138,7 @@ leadership:
   - role: Executive Member
     name: Santosh Mahajan
     intro: >
-      Santosh Mahajan supports the leadership team with his experience and commitment, helping to drive the club’s mission and ensure the successful execution of its events.
+      Santosh Mahajan supports the leadership team with his experience and commitment, helping to drive the club's mission and ensure the successful execution of its events.
 
 event_photos:
   - AMR_3620.jpg

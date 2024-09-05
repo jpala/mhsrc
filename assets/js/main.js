@@ -36,27 +36,34 @@ jQuery(document).ready(function ($) {
     $('.accordion-header').click(function () {
         // Toggle the content of the clicked header
         $(this).next('.accordion-content').slideToggle();
-        
+
         // Close the other sections
         $('.accordion-content').not($(this).next()).slideUp();
     });
-    const $carousel = $(".carousel");
-    const $slides = $(".carousel-slide");
-    let currentIndex = 0;
+    const $carousel = $("#eventphotos .carousel");
+    const $slides = $("#eventphotos .carousel-slide");
+    const $morePhotos = $("#photos .carousel");
+    const $moreSlides = $("#photos .carousel-slide");
+    let epIndex = 0;
+    let pIndex = 0;
 
-    function showSlide(index) {
-        if (index < 0) {
-            currentIndex = $slides.length - 1;
-        } else if (index >= $slides.length) {
-            currentIndex = 0;
-        }
-
-        $carousel.css("transform", `translateX(-${currentIndex * 100}%)`);
+    function showSlide(currentCarousel, index) {
+        currentCarousel.css("transform", `translateX(-${index * 100}%)`);
     }
     const autoAdvanceInterval = 2000; // Change slide every 2 seconds
-
+    var $window = $(window);
     setInterval(function () {
-        currentIndex++;
-        showSlide(currentIndex);
+        var multiplier = Math.round($window.width()/400);
+        showSlide($carousel, epIndex);
+        showSlide($morePhotos, pIndex);
+        pIndex++;
+        epIndex++;
+        console.log(multiplier);
+        if(epIndex*multiplier > $slides.length){
+            epIndex = 0;
+        }
+        if(pIndex > $moreSlides.length){
+            pIndex = 0;
+        }
     }, autoAdvanceInterval);
 });
