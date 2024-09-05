@@ -60,13 +60,26 @@ custom:
 
 events:
   - name: Volleyball & Throwball Tournament
-    description: Come play with us
+    description: >
+      Mountain House Sports and Recreation Club Organizing Volleyball & Throwball Tournament on October 20th At Central Community Park, 25th Main Street, Mountain House, CA 95391.<br>
+      <br>We are a non-profit charity organization under section 501 (c)(3) - EIN 93-2235954  - so donors can claim tax benefit. <br>
+      <br>
+      <b>Registration Fees:</b><br>
+      Volley Ball : $160<br>
+      Throw Ball: $120<br>
+      <br>
+      <b>Payment Methods:</b><br>
+      Zelle or PayPal : mhsrc.org@gmail.com<br>
+      Check payable to "MHSRC"<br>
+      <br><b>Contacts: </b><br>
+        - Rupesh (309-749-8074)<br>
+        - Krishnan (404-200-6892)<br>
     date: 10/20/2024 8 AM
-    registration_deadline: 10/06/2024
+    registration_deadline: Sunday October 6th 2024
     Contacts: 
       - Rupesh (309-749-8074)
       - Krishnan (404-200-6892)
-    registration_url: https://googleforms.com
+    registration_url: https://tinyurl.com/mhsrc2024
     poster: header.png
 
 leadership:
