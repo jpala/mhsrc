@@ -62,8 +62,8 @@ events:
   - name: Independence Day
     description: >
       Mountain House Sports and Recreation Club is celebrating India Independence Day on August 17th At Central Community Park, 25 Main St, Mountain House, CA 95391.<br>
-      <br><b>Contacts: </b><br>
-        - <a href="mailto:contactus@mhsrclub.org">Contact</a><br>
+      <br><b>Mail Us: </b><br>
+        <a href="mailto:contactus@mhsrclub.org">Contact</a><br>
     date: 08/17/2025 4:00 PM
     Contacts: 
       - Venu (208-596-9345)
@@ -82,8 +82,8 @@ events:
       <b>Payment Methods:</b><br>
       Zelle or PayPal : mhsrc.org@gmail.com<br>
       Check payable to "MHSRC"<br>
-      <br><b>Contacts: </b><br>
-        - <a href="mailto:contactus@mhsrclub.org">Contact</a><br>
+      <br><b>Mail Us: </b>
+        <a href="mailto:contactus@mhsrclub.org">Contact</a><br>
     date: 09/13/2025 8:00 AM
     registration_deadline: Saturday, September 6th 2025
     Contacts: 
